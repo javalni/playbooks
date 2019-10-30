@@ -1,19 +1,10 @@
 ---
 - hosts: all
-  gather_facts: False
-
   tasks:
 
   - name: run fos commands
-    brocade_fos_command:
-
-      command_set:
-        # 
+       command_set:
         - command: porterrshow
-
-    
-    register: configout
-
-  - name: print ansible_facts gathered
-    debug:
+          register: configout
+   debug:
       var: configout
