@@ -3,8 +3,7 @@
   tasks:
 
   - name: run fos commands
-       command_set:
-        - command: porterrshow
-          register: configout
+    command: porterrshow
+    register: configout
    debug:
       var: configout
